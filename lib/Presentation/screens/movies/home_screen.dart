@@ -1,3 +1,4 @@
+// ignore: unused_import
 import 'package:cinemapedia/config/constants/environment.dart';
 import 'package:flutter/material.dart';
 
@@ -9,11 +10,11 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //mostrando en pantalla
-    return Scaffold(
-      body: Center(
+    return const Scaffold(
+        //body: Center(
         //child: Text("Hola desde homescreen"),
-        child: Text(Environment.movieDbKey),
-      ),
-    );
+        //child: Text(Environment.movieDbKey),
+        //),
+        body: Placeholder());
   }
 }
