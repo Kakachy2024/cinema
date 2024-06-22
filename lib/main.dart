@@ -1,28 +1,26 @@
 import 'package:flutter/material.dart';
+
 import 'package:cinemapedia/config/router/app_router.dart';
-import 'package:cinemapedia/config/theme/app_theme.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
+import 'package:cinemapedia/config/theme/app_theme.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
 Future<void> main() async {
-  //leer las variables de entorno del archivo .env
-  await dotenv.load(fileName: ".env");
-  runApp(const MyApp());
+  await dotenv.load(fileName: '.env');
+
+  runApp(const ProviderScope(child: MainApp()));
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MainApp extends StatelessWidget {
+  const MainApp({super.key});
 
-  // Este es el archivo principal de la aplicacion.
   @override
   Widget build(BuildContext context) {
-    //ocupamos el router creado
     return MaterialApp.router(
-      //nos pide la configuracion del router
       routerConfig: appRouter,
       debugShowCheckedModeBanner: false,
-      //agregando nuestro theme al main
       theme: AppTheme().getTheme(),
-      //no ingresamos nada mas
     );
   }
 }

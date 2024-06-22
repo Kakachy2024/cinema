@@ -1,4 +1,4 @@
-import 'package:cinemapedia/Presentation/screens/movies/home_screen.dart';
+import 'package:cinemapedia/presentation/screens/movies/home_screen.dart';
 import 'package:go_router/go_router.dart';
 
 // GoRouter configuration
