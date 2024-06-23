@@ -49,7 +49,7 @@ class _HomeViewState extends ConsumerState<_HomeView> {
         //creamos nuestro custom appbar
         const CustomAppbar(),
         //hacer que ocupe el ancho maximo con el expanded
-        Expanded(
+        /* Expanded(
           child: ListView.builder(
             itemCount: nowPlayingMovies.length,
             itemBuilder: (context, index) {
@@ -59,7 +59,8 @@ class _HomeViewState extends ConsumerState<_HomeView> {
               );
             },
           ),
-        )
+        ) */
+        MoviesSlideshow(movies: nowPlayingMovies)
       ],
     );
   }
