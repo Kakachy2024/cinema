@@ -10,10 +10,14 @@ class HomeScreen extends StatelessWidget {
   static const name = 'home-screen';
 
   const HomeScreen({super.key});
-
+//mostrando el body
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(body: _HomeView());
+    return const Scaffold(
+      body: _HomeView(),
+      //mostrando la barra de abajo
+      bottomNavigationBar: CustomBottomNavigationBar(),
+    );
   }
 }
 
