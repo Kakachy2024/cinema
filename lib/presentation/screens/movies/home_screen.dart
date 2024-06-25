@@ -40,6 +40,7 @@ class _HomeViewState extends ConsumerState<_HomeView> {
   Widget build(BuildContext context) {
     //comentando variable para utilizar una clase especifica
     final slideShowMovies = ref.watch(moviesSlidesShowProvider);
+    final nowPlayingMovies = ref.watch(nowPlayingMoviesProvider);
 
     /* return ListView.builder(
       itemCount: nowPlayingMovies.length,
@@ -66,7 +67,12 @@ class _HomeViewState extends ConsumerState<_HomeView> {
             },
           ),
         ) */
-        MoviesSlideshow(movies: slideShowMovies)
+        MoviesSlideshow(movies: slideShowMovies),
+        MovieHorizontalListView(
+          movies: nowPlayingMovies,
+          titlelabel: 'En Cines',
+          subtitlelabel: 'Lunes',
+        )
       ],
     );
   }
